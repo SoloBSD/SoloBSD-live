@@ -9,11 +9,10 @@ firefox
 xfce-icons-elementary
 zenity
 sysctlview
-py37-numpy
-py37-scipy
+py38-numpy
+py38-scipy
 R
 julia
-rtv
 geogebra
 mksh
 gnuplot

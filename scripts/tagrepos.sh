@@ -12,21 +12,21 @@ killall ssh-agent
 eval $(ssh-agent)
 ssh-add
 
-repodir="/tmp/furybsd-tag"
+repodir="/tmp/solobsd-tag"
 
 rm -rf ${repodir}
 mkdir -p ${repodir}
 
-if [ ! -f "/usr/local/furybsd/version" ] ; then
+if [ ! -f "/usr/local/solobsd/version" ] ; then
   echo "FuryBSD must be built first"
   exit 1
 fi
 
-version=`cat /usr/local/furybsd/version`
+version=`cat /usr/local/solobsd/version`
 
 git clone git@github.com:furybsd/furybsd-livecd.git ${repodir}/furybsd-livecd
 
-cd ${repodir}/furybsd-livecd
+cd ${repodir}/solobsd-livecd
 git tag -a $version -m "{$version}"
 git push origin --tags
 rm -rf ${repodir}
